@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZA FB Group Posting - The ultimate Facebook Groups automation tool. Post to 500+ groups simultaneously, up to 1000 posts daily. Automate your Facebook marketing and drive massive traffic.">
+    <meta name="keywords" content="facebook automation, facebook groups, auto poster, facebook marketing, group posting, social media automation">
+    <meta name="author" content="ZA Technologies">
+    
+    <title>ZA FB Group Posting | Automate Your Facebook Groups Marketing</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00d4ff',
+                        secondary: '#8b5cf6',
+                        accent: '#f472b6',
+                        dark: '#0a0a0f',
+                        'dark-lighter': '#111118',
+                        'dark-card': '#16161d',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Floating Elements -->
+    <div class="floating-element floating-element-1"></div>
+    <div class="floating-element floating-element-2"></div>
+    <div class="floating-element floating-element-3"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="logo.png" alt="ZA FB Group Posting" class="h-10">
+            </a>
+            
+            <div class="nav-links hidden md:flex items-center gap-10">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="btn-primary text-sm py-3 px-6">Get Started</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">×</button>
+        <a href="#features" class="mobile-link">Features</a>
+        <a href="#how-it-works" class="mobile-link">How It Works</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#contact" class="btn-primary">Get Started</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span>🚀</span>
+                <span>Trusted by 10,000+ Marketers</span>
+            </div>
+            
+            <h1 class="hero-title animate-on-scroll">
+                Automate Your 
+                <span class="gradient-text">Facebook Groups</span>
+                <br>Marketing at Scale
+            </h1>
+            
+            <p class="hero-subtitle animate-on-scroll">
+                The most powerful Facebook Groups automation tool. Post to 500+ groups simultaneously, 
+                schedule up to 1000 posts daily, and drive massive traffic to your monetization platforms — all on autopilot.
+            </p>
+            
+            <div class="hero-buttons animate-on-scroll">
+                <a href="#contact" class="btn-primary">
+                    Start Free Trial
+                    <span class="ml-2">→</span>
+                </a>
+                <a href="#features" class="btn-secondary">
+                    See Features
+                </a>
+            </div>
+            
+            <div class="hero-stats animate-on-scroll">
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="1000">0</div>
+                    <div class="hero-stat-label">Posts / Day</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="500">0</div>
+                    <div class="hero-stat-label">Groups Simultaneous</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">24/7</div>
+                    <div class="hero-stat-label">Automation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Features</span>
+                <h2 class="section-title">
+                    Everything You Need to 
+                    <span class="gradient-text">Dominate Facebook Groups</span>
+                </h2>
+                <p class="section-subtitle">
+                    Packed with powerful features designed to maximize your reach and automate your entire Facebook Groups marketing strategy.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title">Bulk Posting</h3>
+                    <p class="feature-description">
+                        Post to up to 500 Facebook groups simultaneously. Normal posts and posts with first comments — all automated.
+                    </p>
+                </div>
+                
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">High Volume</h3>
+                    <p class="feature-description">
+                        Publish up to 1,000 posts per day per group. Scale your content distribution like never before.
+                    </p>
+                </div>
+                
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">First Comment Feature</h3>
+                    <p class="feature-description">
+                        Automatically add a first comment to your posts. Perfect for adding links, CTAs, or additional context.
+                    </p>
+                </div>
+                
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Proxy Support</h3>
+                    <p class="feature-description">
+                        Built-in proxy integration to keep your accounts safe and maintain consistent posting without restrictions.
+                    </p>
+                </div>
+                
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">Custom Content</h3>
+                    <p class="feature-description">
+                        Add your own posts and custom comments. Full control over your content with easy-to-use management.
+                    </p>
+                </div>
+                
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon">🖥️</div>
+                    <h3 class="feature-title">24/7 RDP Compatible</h3>
+                    <p class="feature-description">
+                        Run the app on an RDP for non-stop operation. Set it once and let it work around the clock for you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section" id="how-it-works">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">How It Works</span>
+                <h2 class="section-title">
+                    Get Started in 
+                    <span class="gradient-text">4 Simple Steps</span>
+                </h2>
+                <p class="section-subtitle">
+                    From setup to automation in minutes. No technical skills required.
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="steps-line hidden md:block"></div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Install & Configure</h3>
+                        <p class="step-description">
+                            Download ZA FB Group Posting and set up your Facebook account. Connect your proxies for maximum security.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Add Your Groups</h3>
+                        <p class="step-description">
+                            Import your target Facebook groups. Support for up to 500+ groups that you can manage and post to simultaneously.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Create Your Content</h3>
+                        <p class="step-description">
+                            Add your posts and custom first comments. Set up variations to keep your content fresh and engaging.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Launch & Profit</h3>
+                        <p class="step-description">
+                            Start the automation and watch the traffic flow to your AdSense, affiliate offers, or any monetization platform.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Why Choose Us</span>
+                <h2 class="section-title">
+                    Built for 
+                    <span class="gradient-text">Serious Marketers</span>
+                </h2>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="glass-card stat-card animate-on-scroll">
+                    <div class="stat-number gradient-text" data-count="500">0</div>
+                    <div class="stat-label">Groups Supported</div>
+                </div>
+                
+                <div class="glass-card stat-card animate-on-scroll">
+                    <div class="stat-number gradient-text" data-count="1000">0</div>
+                    <div class="stat-label">Posts Per Day</div>
+                </div>
+                
+                <div class="glass-card stat-card animate-on-scroll">
+                    <div class="stat-number gradient-text">24/7</div>
+                    <div class="stat-label">Non-Stop Operation</div>
+                </div>
+                
+                <div class="glass-card stat-card animate-on-scroll">
+                    <div class="stat-number gradient-text">100%</div>
+                    <div class="stat-label">Automation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Pricing</span>
+                <h2 class="section-title">
+                    Choose Your 
+                    <span class="gradient-text">Perfect Plan</span>
+                </h2>
+                <p class="section-subtitle">
+                    Flexible pricing options to match your marketing needs. Start free, upgrade anytime.
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="glass-card pricing-card animate-on-scroll">
+                    <h3 class="pricing-name">Starter</h3>
+                    <div class="pricing-price gradient-text">$XX</div>
+                    <div class="pricing-period">per month</div>
+                    <ul class="pricing-features">
+                        <li>Up to 50 Groups</li>
+                        <li>100 Posts / Day</li>
+                        <li>First Comment Feature</li>
+                        <li>Basic Support</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary w-full">Get Started</a>
+                </div>
+                
+                <div class="glass-card pricing-card featured animate-on-scroll">
+                    <h3 class="pricing-name">Professional</h3>
+                    <div class="pricing-price gradient-text">$XX</div>
+                    <div class="pricing-period">per month</div>
+                    <ul class="pricing-features">
+                        <li>Up to 200 Groups</li>
+                        <li>500 Posts / Day</li>
+                        <li>First Comment Feature</li>
+                        <li>Proxy Support</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full">Get Started</a>
+                </div>
+                
+                <div class="glass-card pricing-card animate-on-scroll">
+                    <h3 class="pricing-name">Enterprise</h3>
+                    <div class="pricing-price gradient-text">$XX</div>
+                    <div class="pricing-period">per month</div>
+                    <ul class="pricing-features">
+                        <li>Up to 500+ Groups</li>
+                        <li>1000+ Posts / Day</li>
+                        <li>First Comment Feature</li>
+                        <li>Advanced Proxy Support</li>
+                        <li>24/7 Priority Support</li>
+                        <li>Custom Features</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary w-full">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">
+                    Frequently Asked 
+                    <span class="gradient-text">Questions</span>
+                </h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Is ZA FB Group Posting safe to use?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Our tool is designed with safety in mind. It includes built-in proxy support, natural posting delays, and human-like behavior patterns to ensure your accounts stay safe. We recommend using it responsibly and following Facebook's guidelines.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>How many Facebook groups can I post to?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Depending on your plan, you can post to up to 500+ Facebook groups simultaneously. Our Enterprise plan offers unlimited group support for high-volume marketers.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Can I run the tool 24/7?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! ZA FB Group Posting is fully compatible with RDP (Remote Desktop Protocol). Simply set it up on an RDP server and let it run around the clock without any interruptions.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>What is the "First Comment" feature?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            The First Comment feature automatically adds a comment to your posts right after they're published. This is perfect for adding links, CTAs, or additional information without cluttering your main post content.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Do I need proxies to use this tool?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            While proxies are not strictly required, we highly recommend using them for added security and to prevent any potential restrictions. Our tool has built-in proxy support for easy configuration.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>What kind of support do you offer?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We offer email support for all plans, with priority support for Professional and Enterprise users. Enterprise customers also get access to 24/7 dedicated support and personalized onboarding.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="contact">
+        <div class="max-w-7xl mx-auto">
+            <div class="cta-box animate-on-scroll">
+                <h2 class="cta-title">
+                    Ready to 
+                    <span class="gradient-text">Scale Your Traffic?</span>
+                </h2>
+                <p class="cta-subtitle">
+                    Join thousands of marketers who are already using ZA FB Group Posting to dominate Facebook Groups marketing.
+                </p>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <a href="mailto:contact@zafbgroupposting.com" class="btn-primary">
+                        Contact Us
+                        <span class="ml-2">→</span>
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        Download Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="logo.png" alt="ZA FB Group Posting" class="footer-logo">
+                <p class="footer-description">
+                    The most powerful Facebook Groups automation tool for marketers who want to scale their traffic and monetization.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 ZA FB Group Posting. All rights reserved.</p>
+            <p>Made with ❤️ for Marketers</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
