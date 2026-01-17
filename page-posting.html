@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ZA FB Page Posting - Automate posting to Facebook Pages. Manage multiple pages, schedule posts, and scale your social presence with our powerful automation tool.">
+    <meta name="keywords"
+        content="facebook automation, facebook pages, page posting, facebook marketing, social media automation, page management">
+    <meta name="author" content="ZA Technologies">
+
+    <title>ZA FB Page Posting | Automate Your Facebook Pages Marketing</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="page-logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b35',
+                        secondary: '#ff8c5a',
+                        accent: '#00d4ff',
+                        dark: '#0a0a0f',
+                        'dark-lighter': '#111118',
+                        'dark-card': '#16161d',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Orange Theme Overrides */
+        .gradient-text-orange {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary-orange {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            color: white;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-orange:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary-orange {
+            background: transparent;
+            color: #ff6b35;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: 2px solid #ff6b35;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary-orange:hover {
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .section-badge-orange {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            color: #ff6b35;
+        }
+
+        .hero-badge-orange {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            color: #ff6b35;
+        }
+
+        .feature-icon-orange {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 90, 0.1));
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 107, 53, 0.3);
+            box-shadow:
+                0 20px 50px rgba(255, 107, 53, 0.15),
+                0 0 0 1px rgba(255, 107, 53, 0.2);
+        }
+
+        .step-number-orange {
+            background: linear-gradient(135deg, #ff6b35, #ff8c5a);
+        }
+
+        .coming-soon-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 15, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(10px);
+        }
+
+        .coming-soon-content {
+            text-align: center;
+            max-width: 600px;
+            padding: 60px 40px;
+            background: rgba(22, 22, 29, 0.8);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .coming-soon-logo {
+            width: 200px;
+            margin: 0 auto 30px;
+        }
+
+        .coming-soon-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .coming-soon-subtitle {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .floating-element-1 {
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+        }
+
+        .floating-element-2 {
+            background: radial-gradient(circle, rgba(255, 140, 90, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating Elements -->
+    <div class="floating-element floating-element-1"></div>
+    <div class="floating-element floating-element-2"></div>
+    <div class="floating-element floating-element-3"></div>
+
+    <!-- Coming Soon Overlay -->
+    <div class="coming-soon-overlay" id="comingSoonOverlay">
+        <div class="coming-soon-content animate-on-scroll visible">
+            <img src="page-logo.png" alt="ZA FB Page Posting" class="coming-soon-logo">
+            <h1 class="coming-soon-title">
+                <span class="gradient-text-orange">Coming Soon</span>
+            </h1>
+            <p class="coming-soon-subtitle">
+                ZA FB Page Posting is currently under development. We're building the most powerful Facebook Pages
+                automation tool for marketers. Enter your email to be notified when we launch!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full sm:w-auto px-6 py-4 rounded-full bg-dark-card border border-gray-700 text-white focus:outline-none focus:border-primary"
+                    style="min-width: 280px;">
+                <button class="btn-primary-orange whitespace-nowrap">
+                    Notify Me
+                    <span class="ml-2">→</span>
+                </button>
+            </div>
+            <div class="mt-8">
+                <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                    ← Back to Home
+                </a>
+                <span class="mx-4 text-gray-600">|</span>
+                <a href="group-posting.html" class="text-gray-400 hover:text-primary transition-colors">
+                    Check out Group Posting →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="page-logo.png" alt="ZA FB Page Posting" class="h-10">
+            </a>
+
+            <div class="nav-links hidden md:flex items-center gap-10">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="group-posting.html" class="nav-link">Group Posting</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#contact" class="btn-primary-orange text-sm py-3 px-6">Get Notified</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">×</button>
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="group-posting.html" class="mobile-link">Group Posting</a>
+        <a href="#features" class="mobile-link">Features</a>
+        <a href="#contact" class="btn-primary-orange">Get Notified</a>
+    </div>
+
+    <!-- Hero Section (hidden behind overlay but for SEO) -->
+    <section class="hero" id="hero" style="visibility: hidden;">
+        <div class="hero-content">
+            <div class="hero-badge hero-badge-orange animate-on-scroll">
+                <span>🚀</span>
+                <span>Coming Soon</span>
+            </div>
+
+            <h1 class="hero-title animate-on-scroll">
+                Automate Your
+                <span class="gradient-text-orange">Facebook Pages</span>
+                <br>Marketing at Scale
+            </h1>
+
+            <p class="hero-subtitle animate-on-scroll">
+                The most powerful Facebook Pages automation tool. Manage multiple pages, schedule posts in advance,
+                and grow your social presence — all on autopilot.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Preview Section (hidden) -->
+    <section class="section" id="features" style="visibility: hidden;">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge section-badge-orange">Coming Features</span>
+                <h2 class="section-title">
+                    What's Coming in
+                    <span class="gradient-text-orange">Page Posting</span>
+                </h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon feature-icon-orange">📄</div>
+                    <h3 class="feature-title">Multi-Page Management</h3>
+                    <p class="feature-description">
+                        Manage and post to multiple Facebook pages from a single dashboard.
+                    </p>
+                </div>
+
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon feature-icon-orange">📅</div>
+                    <h3 class="feature-title">Advanced Scheduling</h3>
+                    <p class="feature-description">
+                        Schedule your posts weeks in advance with our visual content calendar.
+                    </p>
+                </div>
+
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon feature-icon-orange">📊</div>
+                    <h3 class="feature-title">Analytics Dashboard</h3>
+                    <p class="feature-description">
+                        Track engagement, reach, and performance across all your pages.
+                    </p>
+                </div>
+
+                <div class="glass-card feature-card animate-on-scroll">
+                    <div class="feature-icon feature-icon-orange">🔄</div>
+                    <h3 class="feature-title">Auto-Engagement</h3>
+                    <p class="feature-description">
+                        Automatically respond to comments and engage with your audience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="visibility: hidden;">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="page-logo.png" alt="ZA FB Page Posting" class="footer-logo">
+                <p class="footer-description">
+                    Coming soon: The most powerful Facebook Pages automation tool for marketers.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="group-posting.html">Group Posting</a></li>
+                    <li><a href="page-posting.html">Page Posting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ZA Technologies. All rights reserved.</p>
+            <p>Made with ❤️ for Marketers</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
